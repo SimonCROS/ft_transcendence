@@ -17,7 +17,7 @@ RUN openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
 
 RUN curl -fsSL https://deb.nodesource.com/setup_18.x | bash - && apt-get install -y nodejs
 
-RUN npm install --global @nestjs/cli
+RUN npm install --global '@nestjs/cli@^8.0.0'
 
 COPY ./docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 RUN chmod +x /usr/local/bin/docker-entrypoint.sh
